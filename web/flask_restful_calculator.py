@@ -71,10 +71,15 @@ class Substract(Resource):
         outputjson = { "status"  : 200 , "message" : "get request in the substract"}
         return jsonify(outputjson)
 
+class login(Resource):
+    def get(self):
+        return jsonify({"message" : "welcome to the dockerised python flask application which uses the mongo db"})
+
 api.add_resource(Add,"/add")
 api.add_resource(Substract,"/substract")
 api.add_resource(Visit,"/visit")
 api.add_resource(Register,"/register")
+api.add_resource(login,"/")
 
 if __name__ == '__main__':
     formatter = logging.Formatter("[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
