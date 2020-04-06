@@ -3,12 +3,12 @@ Sample project for the dockerised python flask application which uses the mongo 
 
 #We need to have the docker to use this application. After installing the docker & docker-compose run the below commands
 
-sudo docker-compose build
+sudo docker-compose build && 
 sudo docker-compose up
 
 #Sample Commands for testing
 
-curl http://localhost:5000/register
+GET ==> curl http://localhost:5000/register   && POST ==> 
 curl -H "Content-Type:application/json" -d@login.json http://localhost:5000/register
 
 
