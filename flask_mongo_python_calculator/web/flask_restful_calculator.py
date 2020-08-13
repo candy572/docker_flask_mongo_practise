@@ -36,6 +36,7 @@ class Visit(Resource):
             output = output + str(x)
         return jsonify(output)
 
+#curl -H "Content-Type:application/json" -d'{"username":"abc","password":"def"}' http://localhost:5000/register
 class Register(Resource):
     outputjson = ""
     def post(self):
